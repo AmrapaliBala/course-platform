@@ -176,3 +176,17 @@ export const getMe = async (req, res) => {
     },
   });
 };
+
+export const logout = (req, res) => {
+  res.clearCookie("auth_token", {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
+    path: "/",
+  });
+
+  res.json({
+    success: true,
+    message: "Logged out successfully",
+  });
+};
