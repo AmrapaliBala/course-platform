@@ -437,7 +437,7 @@ JWT_SECRET=your_jwt_secret
 
 ``` bash
 
-git clone \<your-github-repository-url>
+git clone https://github.com/AmrapaliBala/course-platform.git
 
 cd course-platform
 
